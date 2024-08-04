@@ -4,11 +4,16 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ex.altura_predio</groupId>
-  <artifactId>altura_predio</artifactId>
+  <groupId>ex.primeiros_exercicios</groupId>
+  <artifactId>primeiros_exercicios</artifactId>
   <version>1.0-SNAPSHOT</version>
+  <packaging>pom</packaging>
+  <modules>
+    <module>cotacao_dolar</module>
+    <module>cotacao_dolar</module>
+  </modules>
 
-  <name>altura_predio</name>
+  <name>primeiros_exercicios</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
