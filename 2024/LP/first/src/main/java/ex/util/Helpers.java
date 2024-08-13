@@ -10,6 +10,14 @@ public class Helpers {
     return tecladoScanner.nextFloat();
   }
 
+  public static int lerValorInteiro() {
+    return tecladoScanner.nextInt();
+  }
+
+  public static String lerProximaString() {
+    return tecladoScanner.nextLine();
+  }
+
   public static void imprimir(String mensagem) {
     System.out.println();
     System.out.println("----------------------------------------------------------------------");
