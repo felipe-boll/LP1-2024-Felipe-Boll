@@ -1,0 +1,29 @@
+package ex.If_else;
+
+import ex.util.Helpers;
+
+public class Exercicio6_lista03{
+
+    public static void main(String[] args) {
+        Helpers.imprimir("Informe sua nota");
+        int nota = Helpers.lerValorInteiro();
+        char conceito;
+
+        if (nota >9) {
+            Helpers.imprimir("Seu conceito é A");
+        } else {
+            if (nota >=8) {
+                Helpers.imprimir("Seu conceito é B");
+            } else {
+                if (nota >=7) {
+                    Helpers.imprimir("Seu conceito é C");
+                }
+            } else {
+                if (nota <7) {
+                    Helpers.imprimir("Seu conceito é D");
+                }
+            } else {}
+        }
+
+    }
+}
