@@ -1,4 +1,4 @@
-package ex.qual_o_dia;
+package ex.lista_01;
 
 import ex.util.Helpers;
 

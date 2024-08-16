@@ -1,4 +1,4 @@
-package ex.cotacao_dolar;
+package ex.lista_01;
 
 import java.util.Scanner;
 

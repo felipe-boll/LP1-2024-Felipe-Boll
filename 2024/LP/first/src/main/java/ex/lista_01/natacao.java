@@ -1,4 +1,4 @@
-package ex.natacao;
+package ex.lista_01;
 
 import ex.util.Helpers;
 

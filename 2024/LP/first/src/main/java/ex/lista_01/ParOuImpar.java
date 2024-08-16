@@ -1,4 +1,4 @@
-package ex.par_ou_impar;
+package ex.lista_01;
 
 import ex.util.Helpers;
 

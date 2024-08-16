@@ -1,4 +1,4 @@
-package ex.consumo;
+package ex.lista_01;
 
 import java.util.Scanner;
 

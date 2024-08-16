@@ -1,4 +1,4 @@
-package ex.qual_e_maior;
+package ex.lista_01;
 
 import ex.util.Helpers;
 

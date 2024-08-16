@@ -1,4 +1,4 @@
-package ex.area_trapezio;
+package ex.lista_01;
 
 import ex.util.Helpers;
 

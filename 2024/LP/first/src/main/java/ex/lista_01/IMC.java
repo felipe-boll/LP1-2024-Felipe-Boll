@@ -1,4 +1,4 @@
-package ex.imc;
+package ex.lista_01;
 
 import ex.util.Helpers;
 

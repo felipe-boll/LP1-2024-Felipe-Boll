@@ -1,4 +1,4 @@
-package ex.eleicao;
+package ex.lista_01;
 
 import ex.util.Helpers;
 
