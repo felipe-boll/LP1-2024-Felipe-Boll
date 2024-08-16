@@ -2,7 +2,7 @@ package ex.lista_01;
 
 import java.util.Scanner;
 
-public class AlturaPredio {
+public class FelipeBoll_01_main {
 
   public static Scanner tecladoScanner = new Scanner(System.in);
 

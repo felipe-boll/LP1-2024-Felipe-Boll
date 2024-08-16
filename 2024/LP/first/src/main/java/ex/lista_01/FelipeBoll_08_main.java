@@ -2,7 +2,7 @@ package ex.lista_01;
 
 import ex.util.Helpers;
 
-public class QualODia {
+public class FelipeBoll_08_main {
 
   public static String obterDiasDaSemana(int dia) {
     String diaDaSemana = " ";

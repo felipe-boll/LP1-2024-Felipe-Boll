@@ -2,7 +2,7 @@ package ex.lista_01;
 
 import ex.util.Helpers;
 
-public class AreaTrapezio {
+public class FelipeBoll_09_main {
 
   public static void main(String[] args) {
     // Entrada

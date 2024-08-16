@@ -4,7 +4,7 @@ import ex.util.Helpers;
 
 import java.lang.Math;
 
-public class IMC {
+public class FelipeBoll_13_main {
 
   public static String verificacaoDoImc(double imc) {
     String classificacao = " ";

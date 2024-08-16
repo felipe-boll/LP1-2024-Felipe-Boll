@@ -2,15 +2,17 @@ package ex.lista_01;
 
 import ex.util.Helpers;
 
-public class ParOuImpar {
+public class FelipeBoll_05_main {
 
-  public static String teste(float numero) {
+  public static String teste(int numero) {
     String valor = " ";
 
-    if (numero % 2 == 0)
-      valor = "Par";
+    if (numero > 0)
+      valor = "Positivo";
+    else if (numero < 0)
+      valor = "Negativo";
     else
-      valor = "Impar";
+      valor = "Igual a zero";
 
     return valor;
   }
@@ -19,7 +21,7 @@ public class ParOuImpar {
 
     // Entrada
     Helpers.imprimir("Informe um numero");
-    float numero = Helpers.lerValorFloat();
+    int numero = Helpers.lerValorInteiro();
 
     // Saida
     System.out.printf("O seu numero é %s", teste(numero));

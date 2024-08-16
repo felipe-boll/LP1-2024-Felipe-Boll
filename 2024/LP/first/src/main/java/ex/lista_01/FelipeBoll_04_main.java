@@ -2,7 +2,7 @@ package ex.lista_01;
 
 import java.util.Scanner;
 
-public class CotacaoDolar {
+public class FelipeBoll_04_main {
 
   public static Scanner tecladoScanner = new Scanner(System.in);
 
@@ -16,27 +16,25 @@ public class CotacaoDolar {
     System.out.println(mensagem);
     System.out.println("----------------------------------------------------------------------");
     System.out.println();
-
   }
 
-  public static float conversaoParaReais(float cotacaoDolar, float quantidadeDolar) {
-    return cotacaoDolar * quantidadeDolar;
+  public static float calculoDeConsumo(float quilometro, float gasolina) {
+    return quilometro / gasolina;
   }
 
   public static void main(String[] args) {
     // Entrada
-    imprimir("Informe a cotação do dólar");
-    float cotacaoDolar = lerValorFloat();
+    imprimir(" Informe a distancia percorrida em quilometros");
+    float quilometro = lerValorFloat();
 
-    imprimir("Informe quantos dólares você tem");
-    float quantidadeDolar = lerValorFloat();
+    imprimir(" Informe a gasolina gasta em litros");
+    float gasolina = lerValorFloat();
 
     // Processamento
-    float quantidadeDeReais = conversaoParaReais(cotacaoDolar, quantidadeDolar);
+    float consumo = calculoDeConsumo(quilometro, gasolina);
 
     // Saida
-    System.out.printf("Voce tem: %f reais", quantidadeDeReais);
+    System.out.printf(" O consumo foi de %f litro por quilometro", consumo);
     tecladoScanner.close();
   }
-
 }

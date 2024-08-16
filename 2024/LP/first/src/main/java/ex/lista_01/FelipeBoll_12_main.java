@@ -2,7 +2,7 @@ package ex.lista_01;
 
 import ex.util.Helpers;
 
-public class natacao {
+public class FelipeBoll_12_main {
 
   public static String divisaoDaNatacao(int idade) {
     String categoria = " ";

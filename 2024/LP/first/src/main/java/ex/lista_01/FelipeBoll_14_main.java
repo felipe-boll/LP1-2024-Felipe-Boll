@@ -2,7 +2,7 @@ package ex.lista_01;
 
 import ex.util.Helpers;
 
-public class aposentadoria {
+public class FelipeBoll_14_main {
 
   public static String testeAposentadoria(int idade, int anosDeTrabalho) {
     String aposentadoria = " ";

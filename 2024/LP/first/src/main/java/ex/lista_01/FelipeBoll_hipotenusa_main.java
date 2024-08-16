@@ -2,7 +2,7 @@ package ex.lista_01;
 
 import ex.util.Helpers;
 
-public class Hipotenusa {
+public class FelipeBoll_hipotenusa_main {
   public static void main(String[] args) {
     // Entrada
     Helpers.imprimir("Informe um cateto");

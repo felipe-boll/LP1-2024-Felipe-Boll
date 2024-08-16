@@ -2,7 +2,7 @@ package ex.lista_01;
 
 import ex.util.Helpers;
 
-public class eleicao {
+public class FelipeBoll_10_main {
 
   public static String classeEleitoral(int idade) {
     String suaClasseEleitoral = " ";

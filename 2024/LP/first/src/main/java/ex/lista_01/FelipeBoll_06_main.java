@@ -2,17 +2,15 @@ package ex.lista_01;
 
 import ex.util.Helpers;
 
-public class numeral {
+public class FelipeBoll_06_main {
 
-  public static String teste(int numero) {
+  public static String teste(float numero) {
     String valor = " ";
 
-    if (numero > 0)
-      valor = "Positivo";
-    else if (numero < 0)
-      valor = "Negativo";
+    if (numero % 2 == 0)
+      valor = "Par";
     else
-      valor = "Igual a zero";
+      valor = "Impar";
 
     return valor;
   }
@@ -21,7 +19,7 @@ public class numeral {
 
     // Entrada
     Helpers.imprimir("Informe um numero");
-    int numero = Helpers.lerValorInteiro();
+    float numero = Helpers.lerValorFloat();
 
     // Saida
     System.out.printf("O seu numero é %s", teste(numero));

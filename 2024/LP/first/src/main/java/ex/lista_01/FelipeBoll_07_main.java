@@ -2,7 +2,7 @@ package ex.lista_01;
 
 import ex.util.Helpers;
 
-public class QualEMaior {
+public class FelipeBoll_07_main {
 
   public static Float testeDoMaior(float numero1, float numero2, float numero3) {
     float maiorNumero = 0;
