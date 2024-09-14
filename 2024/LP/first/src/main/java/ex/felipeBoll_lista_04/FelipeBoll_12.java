@@ -8,5 +8,15 @@ public class FelipeBoll_12 {
 
     System.out.println("Informe um valor inteiro");
     int valor = tecladoScanner.nextInt();
+
+    long fat = 1;
+
+    for (int i = 1; i <= valor; i++) {
+      fat *= i;
+    }
+
+    System.out.printf("O fatorial de %d é: %d", valor, fat);
+
+    tecladoScanner.close();
   }
 }

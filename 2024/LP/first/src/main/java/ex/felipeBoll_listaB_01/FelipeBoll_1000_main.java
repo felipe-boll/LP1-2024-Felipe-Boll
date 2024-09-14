@@ -1,4 +1,4 @@
-package ex.felipeBoll_beecrowd;
+package ex.felipeBoll_listaB_01;
 
 public class FelipeBoll_1000_main {
 

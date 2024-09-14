@@ -1,4 +1,4 @@
-package ex.felipeBoll_beecrowd;
+package ex.felipeBoll_listaB_01;
 
 import java.util.Locale;
 import java.util.Scanner;
