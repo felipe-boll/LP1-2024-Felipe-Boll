@@ -4,9 +4,11 @@ public class FelipeBoll_1097 {
     
     public static void descobrirIJ3() {
         
-        int I = 1;
+        int i = 1;
 
-        for(int j = 7; j >= )
+        for(int j = 7; i <= 9; i--){
+            
+        }
 
     }
     
