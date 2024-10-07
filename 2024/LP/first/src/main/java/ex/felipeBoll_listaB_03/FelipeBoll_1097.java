@@ -12,7 +12,7 @@ public class FelipeBoll_1097 {
 
     }
     
-    
+    //testando
     
     public static void main(String[] args) {
         descobrirIJ3();
