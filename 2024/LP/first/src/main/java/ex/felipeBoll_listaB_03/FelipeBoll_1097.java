@@ -12,6 +12,7 @@ public class FelipeBoll_1097 {
                 System.out.printf("I=%d J=%d\n", i, j);
             }
             int j = Jdef;
+            // teste
         }
             
         
