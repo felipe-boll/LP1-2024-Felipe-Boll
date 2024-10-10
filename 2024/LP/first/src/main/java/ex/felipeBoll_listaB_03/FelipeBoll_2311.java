@@ -34,7 +34,7 @@ public class FelipeBoll_2311 {
             soma -= menor;
             soma *= grauDeDif;
 
-            System.out.printf("%s %f\n", nomeJogadoras, soma);
+            System.out.printf("%s %.2f\n", nomeJogadoras, soma);
 
         }
 
