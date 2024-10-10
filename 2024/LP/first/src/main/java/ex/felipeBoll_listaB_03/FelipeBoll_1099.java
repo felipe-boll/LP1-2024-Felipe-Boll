@@ -19,10 +19,15 @@ public class FelipeBoll_1099 {
 
     }
 
-    public static int descobrirMenor(int x, int y){
+    public static int descobrirMenor(int x, int y) {
         int menor;
 
-        if ()
+        if (x > y) {
+            menor = y;
+        } else
+            menor = x;
+
+        return menor;
 
     }
 
@@ -31,6 +36,17 @@ public class FelipeBoll_1099 {
         for (int i = 0; i < quantTestes; i++) {
             int x = teladoScanner.nextInt();
             int y = teladoScanner.nextInt();
+
+            int maior = descobrirMaior(x, y);
+            int menor = descobrirMenor(x, y);
+            int somaImpares = 0;
+
+            for (int j = menor + 1; j < maior; j++) {
+                if (j % 2 != 0) {
+                    somaImpares += j;
+                }
+            }
+            System.out.println(somaImpares);
 
         }
 
