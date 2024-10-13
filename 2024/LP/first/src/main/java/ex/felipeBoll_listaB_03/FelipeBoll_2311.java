@@ -6,46 +6,43 @@ public class FelipeBoll_2311 {
 
     public static Scanner teladoScanner = new Scanner(System.in);
 
-    public static void descobrirNotaDasJogadoras(int quantJogadoras) {
+    public static void descobrirNotaDasJogadoras() {
 
-        for (int i = 0; i < quantJogadoras; i++) {
-            String nomeJogadoras = teladoScanner.next();
-            double grauDeDif = teladoScanner.nextDouble();
+        String nomeJogadoras = teladoScanner.next();
+        double grauDeDif = teladoScanner.nextDouble();
 
-            double soma = 0;
-            double maior = 0;
-            double menor = 10;
+        double somaNota = 0;
+        double maior = 0;
+        double menor = 10;
 
-            for (int j = 0; j <= 7; j++) {
-                double nota = teladoScanner.nextDouble();
+        for (int i = 0; i < 7; i++) {
+            double nota = teladoScanner.nextDouble();
 
-                if (nota > maior) {
-                    maior = nota;
-                }
+            somaNota += nota;
 
-                if (nota < menor) {
-                    menor = nota;
-                }
-
-                soma += nota;
+            if (nota > maior) {
+                maior = nota;
             }
 
-            soma -= maior;
-            soma -= menor;
-            soma *= grauDeDif;
-
-            System.out.printf("%s %.2f\n", nomeJogadoras, soma);
+            if (nota < menor) {
+                menor = nota;
+            }
 
         }
+
+        double notaFinal = (somaNota - menor - maior) * grauDeDif;
+
+        System.out.printf("%s %.2f\n", nomeJogadoras, notaFinal);
 
     }
 
     public static void main(String[] args) {
 
-
         int quantJogadoras = teladoScanner.nextInt();
 
-        descobrirNotaDasJogadoras(quantJogadoras);
+        for (int i = 0; i < quantJogadoras; i++) {
+            descobrirNotaDasJogadoras();
+        }
 
     }
 }
