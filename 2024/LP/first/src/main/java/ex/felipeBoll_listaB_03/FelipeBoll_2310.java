@@ -12,15 +12,16 @@ public class FelipeBoll_2310 {
 
     for (int i = 0; i < numJogadores; i++) {
 
-      String nome = tecladoScanner.next();
+      tecladoScanner.next();
 
-      for (int j = 0; j < 3; j++) {
-        int tentativaDeSaque = tecladoScanner.nextInt();
-        int tentativaDeBloqueio = tecladoScanner.nextInt();
-        int tentativaDeAtaques = tecladoScanner.nextInt();
+      int tentativaDeSaque = +tecladoScanner.nextInt();
+      int tentativaDeBloqueio = +tecladoScanner.nextInt();
+      int tentativaDeAtaques = +tecladoScanner.nextInt();
 
-      }
-
+      int acertosDeSaque = +tecladoScanner.nextInt();
+      int acertosDeBloqueio = +tecladoScanner.nextInt();
+      int acertosDeAtaques = +tecladoScanner.nextInt();
     }
+
   }
 }

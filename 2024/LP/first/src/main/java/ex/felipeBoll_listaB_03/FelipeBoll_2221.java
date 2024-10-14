@@ -36,12 +36,12 @@ public class FelipeBoll_2221 {
 
     int valorDoGolpe_D = (ataqueP_D + defesaP_D) / 2;
     if (levelT_D % 2 == 0) {
-      valorDoGolpe_D *= (1 + valorBonus);
+      valorDoGolpe_D += valorBonus;
     }
 
     int valorDoGolpe_G = (ataqueP_G + defesaP_G) / 2;
     if (levelT_G % 2 == 0) {
-      valorDoGolpe_G = (1 + valorBonus);
+      valorDoGolpe_G += valorBonus;
     }
 
     descobrirGolpeVitorioso(valorDoGolpe_D, valorDoGolpe_G);
