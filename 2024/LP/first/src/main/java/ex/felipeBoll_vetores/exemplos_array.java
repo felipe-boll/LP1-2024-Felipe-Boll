@@ -50,7 +50,7 @@ public class exemplos_array {
     }
 
     public static void ex5(){
-        int[] n;
+        //int[] n;
 
         //imprimirArraysInt(n); // Erro;
     }
