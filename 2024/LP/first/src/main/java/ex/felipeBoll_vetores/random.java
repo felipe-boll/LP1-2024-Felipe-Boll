@@ -19,7 +19,7 @@ public class random {
     }
 
     public static int[] trocarValor(int[] vetor, int posicaoA, int posicaoB){
-        
+
     }
 
     public static int[] obterHistogramaValores_0_9(int[] vetor){
@@ -98,7 +98,7 @@ public class random {
     public static void main(String[] args) {
         //Random randon = new Random();
 
-        int[] vetor = gerarVetorInteirosAleatorios();
+        //int[] vetor = gerarVetorInteirosAleatorios();
 
         /*int quantidade = 1000;
         int[] vetor = gerarVetorInteirosAleatorios(quantidade, 10);
