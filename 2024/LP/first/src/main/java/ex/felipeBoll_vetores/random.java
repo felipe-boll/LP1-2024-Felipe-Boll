@@ -15,45 +15,35 @@ public class random {
     }
 
     public static int[] inverter(int[] vetor){
+        int[] vInvertido = new int[vetor.length];
+
+        for(int i = 0; i < vInvertido.length; i++){
+            vInvertido[i] = vetor[vInvertido.length - 1 - i];
+        }
+
+        return vInvertido;
 
     }
 
     public static int[] trocarValor(int[] vetor, int posicaoA, int posicaoB){
 
+        int[] trocado = new int[vetor.length];
+
+        for(int i = 0; i < trocado.length; i++){
+            trocado[i] = vetor[i];
+        }
+
+        int auxiliar = trocado[posicaoA];
+        trocado[posicaoA] = trocado[posicaoB];
+        trocado[posicaoB] = auxiliar;
+
+        return trocado;
+
+
     }
 
     public static int[] obterHistogramaValores_0_9(int[] vetor){
         return null;
-
-        int[] histograma;
-
-        for(int i = 0; i < vetor.length; i++){
-            switch (i) {
-                case 1:
-                    histograma[1] += 1;
-                case 2:
-                    histograma[2] += 2;
-                case 3:
-                    histograma[3] += 2;
-                case 4:
-                    histograma[4] += 2;
-                case 5:
-                    histograma[5] += 2;
-                case 6:
-                    histograma[6] += 2;
-                case 7:
-                    histograma[7] += 2;
-                case 8:
-                    histograma[8] += 2;
-                case 9:
-                    histograma[9] += 2;
-                default:
-                    break;
-            }
-        }
-
-        return histograma;
-
     }
 
     public static int obterIndice(int[] vetor, int valor){
@@ -87,7 +77,7 @@ public class random {
         for(int i = 0; i < tamanho; i++){
              vetor[i] = randon.nextInt(intervalo);
              //Desativar para ver os valores do vetor
-             //System.out.println(vetor[i]);
+             System.out.println(vetor[i]);
         }
 
         return vetor;
@@ -97,6 +87,17 @@ public class random {
     
     public static void main(String[] args) {
         //Random randon = new Random();
+
+        int[] vetor = gerarVetorInteirosAleatorios(5, 4);
+        int posicaoA = 1;
+        int posicaoB = 4;
+        int[] trocado = trocarValor(vetor, posicaoA, posicaoB);
+        imprimirArraysInt(trocado);
+
+        /*int[] vetor = gerarVetorInteirosAleatorios(5, 4);
+        int[] vInvertido = inverter(vetor);
+        imprimirArraysInt(vInvertido);*/
+
 
         //int[] vetor = gerarVetorInteirosAleatorios();
 
