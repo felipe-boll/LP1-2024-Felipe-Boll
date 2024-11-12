@@ -14,22 +14,15 @@ public class FelipeBoll_1961 {
     }
     
     public static String descobrirSeSapoConseguePular(int[] alturaCanos, int alturaPulo){
-        String mensagem = " ";
-        int alturaCano;
 
         for(int i = 1; i < alturaCanos.length; i++){
             int diferenca = alturaCanos[i] - alturaCanos[i - 1];
             
-            if (diferenca <= alturaPulo && diferenca > 0) {
-                mensagem = "YOU WIN";
-            } else {
-                mensagem = "GAME OVER";
-                break;
+            if (Math.abs(diferenca) > alturaPulo) {
+                return "GAME OVER";
             }
-
         }
-
-        return mensagem;
+        return "YOU WIN";
     }
     
     public static void main(String[] args) {
