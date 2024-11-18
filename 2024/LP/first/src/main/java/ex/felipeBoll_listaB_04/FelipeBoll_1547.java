@@ -8,14 +8,18 @@ public class FelipeBoll_1547 {
 
   public static int descobrirVencedor(int[] alunos, int numeroSorteado) {
     int vencedor = 0;
+    int menorDiferenca = Integer.MAX_VALUE;
+    int diferenca;
 
     for (int i = 0; i < alunos.length; i++) {
+      diferenca = Math.abs(alunos[i] - numeroSorteado);
 
-      if (alunos[i] == numeroSorteado) {
+      if (diferenca == 0) {
+        return i + 1;
+      } else if (diferenca < menorDiferenca) {
+        menorDiferenca = diferenca;
         vencedor = i + 1;
-        break;
       }
-
     }
 
     return vencedor;
