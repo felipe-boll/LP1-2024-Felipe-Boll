@@ -68,11 +68,119 @@ public class ExerciciosMatrix {
 
         for (int i = 0; i < linhas; i++) {
             for (int j = 0; j < colunas; j++) {
-                campoMinado[][]
+                
             }
         }
         return campoMinado;
         
+    }
+
+    public static int somaMatrizInt(int[][] matriz){
+        int soma = 0;
+        int linhas = matriz.length;
+        int colunas = matriz[0].length;
+
+        for(int i = 0; i < linhas; i++){
+            for (int j = 0; j < colunas; j++) {
+                soma += matriz[i][j];
+            }
+        }
+
+        return soma;
+    }
+
+    public static int[] somarLinhasMatrizInt(int[][] matriz){
+        int linhas = matriz.length;
+        int[] somaLinha = new int[linhas];
+        int colunas = matriz[0].length;
+
+        for (int i = 0; i < linhas; i++) {
+            for (int j = 0; j < colunas; j++) {
+                somaLinha[i] += matriz[i][j];
+            }
+        }
+
+        return somaLinha;
+    }
+
+    public static int[] somarColunasMatrizInt(int[][] matriz){
+        int colunas = matriz[0].length;
+        int linhas = matriz.length;
+        int[] somaColunas = new int[colunas];
+
+        for (int i = 0; i < linhas; i++) {
+            for (int j = 0; j < colunas; j++) {
+                somaColunas[j] += matriz[i][j];
+            }
+        }
+
+        return somaColunas;
+    }
+
+    public static int[] obterLinha(int[][]matriz, int linha){
+        int colunas = matriz[0].length;
+        int[] linhaDesejada = new int[matriz.length];
+
+        for (int j = 0; j < colunas; j++) {
+                linhaDesejada[j] = matriz[linha][j];
+        }
+
+        return linhaDesejada;
+    }
+
+    public static int[] obterColuna(int[][]matriz, int coluna){
+        int linha = matriz.length;
+        int[] colunaDesejada = new int[matriz[0].length];
+
+        for (int i = 0; i < linha; i++) {
+                colunaDesejada[i] = matriz[i][coluna];
+        }
+
+        return colunaDesejada;
+    }
+
+    public static multiplicarMatriz(int[][] matriz, int valorMult){
+        
+    }
+
+    public static void somaMatriz(){
+        int[][] matriz = lerMatrizInt(4, 3);
+        int somaMatrizInt = somaMatrizInt(matriz);
+        System.out.println(somaMatrizInt);
+    }
+
+    public static void somaLinhas(){
+        int[][] matriz = lerMatrizInt(4, 3);
+        int[] somaLinha = somarLinhasMatrizInt(matriz);
+        imprimirArraysInt(somaLinha);
+    }
+
+    public static void somaColunas(){
+        int[][] matriz = lerMatrizInt(4, 3);
+        int[] somaColunas = somarColunasMatrizInt(matriz);
+        imprimirArraysInt(somaColunas);
+    }
+
+    public static void obterLinha(){
+        int quantLinhas = tecladoScanner.nextInt();
+        int quantColunas = tecladoScanner.nextInt();
+        int linha = tecladoScanner.nextInt();
+        int[][] matriz = lerMatrizInt(quantLinhas, quantColunas);
+        int[] linhaDesejada = obterLinha(matriz, linha);
+        imprimirArraysInt(linhaDesejada);
+    }
+
+    public static void obterColuna(){
+        int quantLinhas = tecladoScanner.nextInt();
+        int quantColunas = tecladoScanner.nextInt();
+        int coluna = tecladoScanner.nextInt();
+        int[][] matriz = lerMatrizInt(quantLinhas, quantColunas);
+        int[] colunaDesejada = obterColuna(matriz, coluna);
+        imprimirArraysInt(colunaDesejada);
+    }
+
+    public static void multiplicarMatriz(){
+
     }
 
     public static void exercicioDiagonal(){
@@ -96,6 +204,11 @@ public class ExerciciosMatrix {
     }
 
     public static void main(String[] args) {
+        //somaMatriz();
+        //somaLinhas();
+        //somaColunas();
+        //obterLinha();
+        //obterColuna();
         //exercicioDiagonal();
         //exercicioMaiorPos();
     }
