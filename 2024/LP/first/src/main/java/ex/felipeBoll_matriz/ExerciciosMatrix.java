@@ -8,17 +8,37 @@ public class ExerciciosMatrix {
     public static Random randon = new Random();
     public static Scanner tecladoScanner = new Scanner(System.in);
 
-    public static void imprimirArraysInt(int[] array){
-        for(int i = 0; i < array.length; i++){
+    public static void imprimirMatrizInt(int[][] matriz) {
+        int linhas = matriz.length;
+        int colunas = matriz[0].length;
+
+        for (int i = 0; i < colunas; i++) {
+            System.out.printf("\t [ %d ]", i);
+        }
+
+        System.out.println();
+
+        for (int i = 0; i < linhas; i++) {
+
+            System.out.printf("[ %d ]", i);
+            for (int j = 0; j < colunas; j++) {
+                System.out.printf("\t%d ", matriz[i][j]);
+            }
+            System.out.println();
+        }
+    }
+
+    public static void imprimirArraysInt(int[] array) {
+        for (int i = 0; i < array.length; i++) {
             System.out.printf("[%d]: %d\n", i, array[i]);
         }
     }
 
-    public static int[][] lerMatrizInt(int linhas, int colunas){
+    public static int[][] lerMatrizInt(int linhas, int colunas) {
         int[][] matriz = new int[linhas][colunas];
 
-        for(int i = 0; i < linhas; i++){
-            for(int  j = 0; j < colunas; j++){
+        for (int i = 0; i < linhas; i++) {
+            for (int j = 0; j < colunas; j++) {
                 System.out.printf("Informe o valor [%d] [%d]:", i, j);
                 matriz[i][j] = tecladoScanner.nextInt();
             }
@@ -27,7 +47,7 @@ public class ExerciciosMatrix {
         return matriz;
     }
 
-    public static int[] obterDiagonalPrincipal(int[][]matriz, int coluna){
+    public static int[] obterDiagonalPrincipal(int[][] matriz, int coluna) {
         int[] diagonalPrincipal = new int[coluna];
         int linhas = matriz.length;
         int colunas = matriz[0].length;
@@ -43,8 +63,19 @@ public class ExerciciosMatrix {
         return diagonalPrincipal;
     }
 
+    public static int[] obterDiagonalSecundaria(int[][] matriz, int coluna) {
+        int[] diagonalSecundaria = new int[coluna];
+        int colunas = matriz[0].length;
+        int cont = 0;
 
-    public static int[] obterPosMaiorValor(int[][]matriz){
+        for (int i = colunas - 1; i >= 0; i--, cont++) {
+            diagonalSecundaria[cont] = matriz[i][i];
+        }
+
+        return diagonalSecundaria;
+    }
+
+    public static int[] obterPosMaiorValor(int[][] matriz) {
         int[] posicaoMaior = new int[2];
         int linha = matriz.length;
         int coluna = matriz[0].length;
@@ -63,24 +94,12 @@ public class ExerciciosMatrix {
         return posicaoMaior;
     }
 
-    public static int[][] criarCampoMinado(int linhas, int colunas, int quantBombas){
-        int[][] campoMinado = new int[linhas][colunas];
-
-        for (int i = 0; i < linhas; i++) {
-            for (int j = 0; j < colunas; j++) {
-                
-            }
-        }
-        return campoMinado;
-        
-    }
-
-    public static int somaMatrizInt(int[][] matriz){
+    public static int somaMatrizInt(int[][] matriz) {
         int soma = 0;
         int linhas = matriz.length;
         int colunas = matriz[0].length;
 
-        for(int i = 0; i < linhas; i++){
+        for (int i = 0; i < linhas; i++) {
             for (int j = 0; j < colunas; j++) {
                 soma += matriz[i][j];
             }
@@ -89,7 +108,7 @@ public class ExerciciosMatrix {
         return soma;
     }
 
-    public static int[] somarLinhasMatrizInt(int[][] matriz){
+    public static int[] somarLinhasMatrizInt(int[][] matriz) {
         int linhas = matriz.length;
         int[] somaLinha = new int[linhas];
         int colunas = matriz[0].length;
@@ -103,7 +122,7 @@ public class ExerciciosMatrix {
         return somaLinha;
     }
 
-    public static int[] somarColunasMatrizInt(int[][] matriz){
+    public static int[] somarColunasMatrizInt(int[][] matriz) {
         int colunas = matriz[0].length;
         int linhas = matriz.length;
         int[] somaColunas = new int[colunas];
@@ -117,51 +136,61 @@ public class ExerciciosMatrix {
         return somaColunas;
     }
 
-    public static int[] obterLinha(int[][]matriz, int linha){
+    public static int[] obterLinha(int[][] matriz, int linha) {
         int colunas = matriz[0].length;
         int[] linhaDesejada = new int[matriz.length];
 
         for (int j = 0; j < colunas; j++) {
-                linhaDesejada[j] = matriz[linha][j];
+            linhaDesejada[j] = matriz[linha][j];
         }
 
         return linhaDesejada;
     }
 
-    public static int[] obterColuna(int[][]matriz, int coluna){
+    public static int[] obterColuna(int[][] matriz, int coluna) {
         int linha = matriz.length;
         int[] colunaDesejada = new int[matriz[0].length];
 
         for (int i = 0; i < linha; i++) {
-                colunaDesejada[i] = matriz[i][coluna];
+            colunaDesejada[i] = matriz[i][coluna];
         }
 
         return colunaDesejada;
     }
 
-    public static multiplicarMatriz(int[][] matriz, int valorMult){
-        
+    public static int[][] multiplicarMatriz(int[][] matriz, int valorMult) {
+        int linha = matriz.length;
+        int coluna = matriz[0].length;
+        int[][] matrizMultiplicada = new int[linha][coluna];
+
+        for (int i = 0; i < linha; i++) {
+            for (int j = 0; j < coluna; j++) {
+                matrizMultiplicada[i][j] = matriz[i][j] * valorMult;
+            }
+        }
+
+        return matrizMultiplicada;
     }
 
-    public static void somaMatriz(){
+    public static void somaMatriz() {
         int[][] matriz = lerMatrizInt(4, 3);
         int somaMatrizInt = somaMatrizInt(matriz);
         System.out.println(somaMatrizInt);
     }
 
-    public static void somaLinhas(){
+    public static void somaLinhas() {
         int[][] matriz = lerMatrizInt(4, 3);
         int[] somaLinha = somarLinhasMatrizInt(matriz);
         imprimirArraysInt(somaLinha);
     }
 
-    public static void somaColunas(){
+    public static void somaColunas() {
         int[][] matriz = lerMatrizInt(4, 3);
         int[] somaColunas = somarColunasMatrizInt(matriz);
         imprimirArraysInt(somaColunas);
     }
 
-    public static void obterLinha(){
+    public static void obterLinha() {
         int quantLinhas = tecladoScanner.nextInt();
         int quantColunas = tecladoScanner.nextInt();
         int linha = tecladoScanner.nextInt();
@@ -170,7 +199,7 @@ public class ExerciciosMatrix {
         imprimirArraysInt(linhaDesejada);
     }
 
-    public static void obterColuna(){
+    public static void obterColuna() {
         int quantLinhas = tecladoScanner.nextInt();
         int quantColunas = tecladoScanner.nextInt();
         int coluna = tecladoScanner.nextInt();
@@ -179,11 +208,16 @@ public class ExerciciosMatrix {
         imprimirArraysInt(colunaDesejada);
     }
 
-    public static void multiplicarMatriz(){
-
+    public static void multiplicarMatriz() {
+        int quantLinhas = tecladoScanner.nextInt();
+        int quantColunas = tecladoScanner.nextInt();
+        int valorMult = tecladoScanner.nextInt();
+        int[][] matriz = lerMatrizInt(quantLinhas, quantColunas);
+        int[][] matrizMultiplicada = multiplicarMatriz(matriz, valorMult);
+        imprimirMatrizInt(matrizMultiplicada);
     }
 
-    public static void exercicioDiagonal(){
+    public static void exercicioDiagonal() {
         int quantLinhas = tecladoScanner.nextInt();
         int quantColunas = tecladoScanner.nextInt();
         int[][] matriz = lerMatrizInt(quantLinhas, quantColunas);
@@ -191,7 +225,7 @@ public class ExerciciosMatrix {
         imprimirArraysInt(diagonalPrincipal);
     }
 
-    public static void exercicioMaiorPos(){
+    public static void exercicioMaiorPos() {
         int quantLinhas = tecladoScanner.nextInt();
         int quantColunas = tecladoScanner.nextInt();
         int[][] matriz = lerMatrizInt(quantLinhas, quantColunas);
@@ -199,17 +233,23 @@ public class ExerciciosMatrix {
         imprimirArraysInt(posicaoMaior);
     }
 
-    public static void exercicioCampoMinado(){
-
+    public static void exercicioDiagonalSecundaria() {
+        int quantLinhas = tecladoScanner.nextInt();
+        int quantColunas = tecladoScanner.nextInt();
+        int[][] matriz = lerMatrizInt(quantLinhas, quantColunas);
+        int[] diagonalSecundaria = obterDiagonalSecundaria(matriz, 3);
+        imprimirArraysInt(diagonalSecundaria);
     }
 
     public static void main(String[] args) {
-        //somaMatriz();
-        //somaLinhas();
-        //somaColunas();
-        //obterLinha();
-        //obterColuna();
-        //exercicioDiagonal();
-        //exercicioMaiorPos();
+        // somaMatriz();
+        // somaLinhas();
+        // somaColunas();
+        // obterLinha();
+        // obterColuna();
+        // exercicioDiagonal();
+        // exercicioMaiorPos();
+        // multiplicarMatriz();
+        exercicioDiagonalSecundaria();
     }
 }
