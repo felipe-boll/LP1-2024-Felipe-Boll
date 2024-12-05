@@ -11,7 +11,7 @@ public class FelipeBoll_1743Maquina {
       vetorInt[i] = tecladoScanner.nextInt();
     }
 
-    return vetorInt;//
+    return vetorInt;
   }
 
   public static char descobrirCompatibilidade(int[] primeiroConector, int[] segundoConector) {
