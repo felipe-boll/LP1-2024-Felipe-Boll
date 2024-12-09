@@ -48,7 +48,7 @@ public class ByteDoMilhao {
     }
   }
 
-  // teste
+  // Que porra ta acontecendo??
 
   public static void main(String[] args) {
     String nome = qualSeuNome();
