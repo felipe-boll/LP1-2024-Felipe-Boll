@@ -48,6 +48,8 @@ public class ByteDoMilhao {
     }
   }
 
+  // teste
+
   public static void main(String[] args) {
     String nome = qualSeuNome();
     falaInicial(nome);
