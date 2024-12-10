@@ -12,6 +12,8 @@ public class ByteDoMilhao {
 
     if (nome.equals("Odair") || nome.equals("Oda")) {
       nome = "Mestre";
+    } else if(nome.equals("Lo") || nome.equals("Thiago Lo")){
+      nome = "Senhor Thiagolo";
     }
 
     return nome;
@@ -19,14 +21,16 @@ public class ByteDoMilhao {
 
   public static void falaInicial(String nome) {
     if (nome.equals("Mestre")) {
-      System.out.printf("Vejamos se não temos um mestre entre nós. Acho que este teste sera facil para o senhor");
-    } else {
-      System.out.printf("Então vamos testar suas habilidades %s", nome);
+      System.out.printf("Vejamos se não temos um mestre entre nós. Acho que este teste sera facil para o senhor\n");
+    } else if (nome.equals("Senhor Thiagolo")) {
+      System.out.printf("Vejamos se não estamos com ele, com o magnifico, o grande, o incrivel, o SENHOR dos senhores, %s. Vamos ver se voce é capaz deste desafio\n", nome);
+    }else{
+      System.out.printf("Então vamos testar suas habilidades %s\n", nome);
     }
   }
 
   public static String[] patentesNaEmpresa() {
-    String[] patente = { "Estagiario" };
+    String[] patente = { "Estagiario", "Alguma coisa" };
 
     return patente;
   }
@@ -42,16 +46,18 @@ public class ByteDoMilhao {
   }
 
   public static String[] criarAlternativasCorretas() {
-    String[] alternativasCorretas = { "A" };
+    String[] alternativasCorretas = {"A", "B", "C", "D", "A"};
 
     return alternativasCorretas;
   }
 
   public static void imprimirPerguntaEAlternativas(String[][] perguntasEAlternativas, int numPerguntas) {
+    String[] perguntas = new String[perguntasEAlternativas.length];
     int colunas = perguntasEAlternativas[0].length;
 
     for (int j = 0; j < colunas; j++) {
-      System.out.printf("%s\n", perguntasEAlternativas[numPerguntas][j]);
+      perguntas[numPerguntas] = perguntasEAlternativas[numPerguntas][j];
+      System.out.println(perguntas[numPerguntas]);
     }
 
   }
@@ -64,9 +70,13 @@ public class ByteDoMilhao {
   }
 
   public static void verificarSePerguntaCorreta(String alternativaSelecionada, String[] alternativasCorretas,
-      int numPerguntas) {
-    if (alternativasCorretas[numPerguntas].equals(alternativaSelecionada)) {
+      int numPerguntas, String suaPatente, String patentes, String nome){
 
+    if (alternativasCorretas[numPerguntas].equals(alternativaSelecionada)) {
+      suaPatente = patentes[];
+      System.out.printf("Parabens, voce realmente acertou %s. Agora eu vou te promover para a posicão de %s\n", nome, patente[(numPerguntas + 1)]);
+    } else{
+      System.out.printf("Que pena %s, mas não desanima, vamos para a proxima. Voce na patente %s\n", nome, suaPatente);
     }
   }
 
@@ -75,11 +85,12 @@ public class ByteDoMilhao {
     falaInicial(nome);
     String[][] perguntasEAlternativas = criarPerguntasEAlternativas();
     String[] alternativasCorretas = criarAlternativasCorretas();
-    String[] patente = patentesNaEmpresa();
+    String[] patentes = patentesNaEmpresa();
+    String suaPatente = patentes[0];
+    
+    int numPerguntas = 0;
 
     while (true) {
-      int numPerguntas = 0;
-
       if (numPerguntas == perguntasEAlternativas.length) {
         break;
       }
@@ -87,6 +98,7 @@ public class ByteDoMilhao {
       imprimirPerguntaEAlternativas(perguntasEAlternativas, numPerguntas);
 
       String alternativaSelecionada = perguntaDaAlternativa(nome);
+      verificarSePerguntaCorreta(alternativaSelecionada, alternativasCorretas, numPerguntas, suaPatente, nome);
 
       numPerguntas++;
     }
