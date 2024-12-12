@@ -73,10 +73,10 @@ public class ByteDoMilhao {
       int numPerguntas, String suaPatente, String patentes, String nome){
 
     if (alternativasCorretas[numPerguntas].equals(alternativaSelecionada)) {
-      suaPatente = patentes[];
-      System.out.printf("Parabens, voce realmente acertou %s. Agora eu vou te promover para a posicão de %s\n", nome, patente[(numPerguntas + 1)]);
+      //suaPatente = patentes[];
+      System.out.printf("Parabens, voce realmente acertou %s. Agora eu vou te promover para a posicão de %s\n", nome, suaPatente);
     } else{
-      System.out.printf("Que pena %s, mas não desanima, vamos para a proxima. Voce na patente %s\n", nome, suaPatente);
+      System.out.printf("Que pena %s, mas não desanima, vamos para a proxima. Voce esta na patente %s\n", nome, suaPatente);
     }
   }
 
@@ -98,7 +98,7 @@ public class ByteDoMilhao {
       imprimirPerguntaEAlternativas(perguntasEAlternativas, numPerguntas);
 
       String alternativaSelecionada = perguntaDaAlternativa(nome);
-      verificarSePerguntaCorreta(alternativaSelecionada, alternativasCorretas, numPerguntas, suaPatente, nome);
+      verificarSePerguntaCorreta(alternativaSelecionada, alternativasCorretas, numPerguntas, suaPatente, suaPatente, nome);
 
       numPerguntas++;
     }
