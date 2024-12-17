@@ -7,17 +7,21 @@ public class ByteDoMilhao {
   public static Scanner tecladoScanner = new Scanner(System.in);
 
   public static void menu() {
-    String mensagem = "O jogo funciona da seguinte maneira: Voce entrara no Reality Show do nosso apresentador Silício Santos, onde ele te perguntara coisas sobre informatica e voce devera responder conforme a alternativa correta, conforme voce acerta ira subir nas patentes da empresa Empresa, voce começa como um simples estagiario mas pode até se tornar o CEO, boa sorte!!\n\n";
+    String mensagem = "O jogo funciona da seguinte maneira: Voce entrara no Reality Show do nosso apresentador Silício Santos, onde ele te perguntara coisas sobre informatica e voce devera\nresponder conforme a alternativa correta, conforme voce acerta ira subir nas patentes da empresa Empresa, voce começa como um simples estagiario mas pode até se tornar o\nBBB(Big Bill Boss), boa sorte!!\n\n";
 
     while (true) {
-      System.out.printf("1 - Para jogar Byte Do Milhão.\n2 - Como o jogo funciona\n");
+      System.out.printf("1 - Para jogar Byte Do Milhão.\n2 - Como o jogo funciona\n\n");
       int interacaoMenu = tecladoScanner.nextInt();
+      System.out.println();
 
       if (interacaoMenu == 1) {
         System.out.println("Então vamos jogar");
+        limparTela();
         break;
       } else {
+        System.out.printf("=============================================================================================================================================================================\n\n");
         System.out.print(mensagem);
+        System.out.printf("=============================================================================================================================================================================\n\n");
       }
     }
   }
@@ -42,7 +46,7 @@ public class ByteDoMilhao {
           suaPatente);
     } else if (nome.equals("Senhor Thiagolo")) {
       System.out.printf(
-          "Vejamos se não estamos com ele, com o magnifico, o grande, o incrivel, o SENHOR dos senhores, %s. Vamos ver se voce é capaz deste desafio, vamos ver como o senhor se sai começando como %s\n",
+          "Vejamos se não estamos com ele, com o magnifico, o grande, o incrivel, o SENHOR dos senhores, %s. Vamos ver se voce é capaz deste desafio, como lidara começandocomo %s?\n",
           nome, suaPatente);
     } else {
       System.out.printf("Então vamos testar suas habilidades %s, voce começara na empresa como %s\n", nome, suaPatente);
@@ -98,7 +102,16 @@ public class ByteDoMilhao {
 
   public static String perguntaDaAlternativa(String nome) {
     System.out.printf("Então %s, qual vai escolher? A, B, C ou D?\n", nome);
-    String alternativaSelecionada = tecladoScanner.next();
+    String alternativaSelecionada = tecladoScanner.next().toLowerCase();
+    
+    while (true) {
+      if (alternativaSelecionada.equals("a") || alternativaSelecionada.equals("b") || alternativaSelecionada.equals("c") || alternativaSelecionada.equals("d")) {
+        break;
+      } else{
+        System.out.printf("Este é um valor invalido %s. Informe sua resposta novamente\n", nome);
+        alternativaSelecionada = tecladoScanner.next();
+      }
+    }
 
     return alternativaSelecionada;
   }
@@ -143,6 +156,7 @@ public class ByteDoMilhao {
       String alternativaSelecionada = perguntaDaAlternativa(nome);
       verificarSePerguntaCorreta(alternativaSelecionada, alternativasCorretas, numPerguntas, suaPatente, patentes, nome,
           posicao);
+      posicao++;    
 
       numPerguntas++;
 
