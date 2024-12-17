@@ -61,6 +61,14 @@ public class ByteDoMilhao {
     return cargo;
   }
 
+  public static void limparTela(){
+    for(int i = 0; i < 40; i++){
+      System.out.println();
+    }
+    System.out.println("\033\143");
+
+  }
+
   public static String[][] criarPerguntasEAlternativas() {
     String[][] perguntasEAlternativas = { { "Teste", "A", "B", "C", "D" },
         { "Teste", "A", "B", "C", "D" },
@@ -104,7 +112,7 @@ public class ByteDoMilhao {
       System.out.printf(
           "Parabens, voce realmente acertou %s. Agora eu vou te promover para a posicão de %s. Vamos para a proxima pergunta!!\n",
           nome,
-          suaPatente);
+          suaPatente); 
     } else {
       System.out.printf(
           "Que pena %s, mas não desanima, vamos para a proxima. Voce esta na patente %s. Vamos para a proxima pergunta!!\n",
