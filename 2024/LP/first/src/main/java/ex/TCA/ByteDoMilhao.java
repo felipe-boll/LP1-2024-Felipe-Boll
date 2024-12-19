@@ -82,7 +82,7 @@ public class ByteDoMilhao {
     }
   }
 
-  // Imprime as ASCII para o menu e le a interação para começar ou não o jogo
+  // Imprime as ASCII para o menu e le a interação para começar o jogo ou explicar como funciona
   public static void menu() {
     String mensagem = "O jogo funciona da seguinte maneira: Voce entrara no Reality Show do nosso apresentador Silício Santos, onde ele te perguntara coisas sobre informatica e voce devera\nresponder conforme a alternativa correta, conforme voce acerta ira subir nas patentes da empresa Empresa, voce começa como um simples estagiario mas pode até se tornar o\nBBB(Big Bill Boss), boa sorte!!\n\n";
 
@@ -150,6 +150,7 @@ public class ByteDoMilhao {
     return patente;
   }
 
+  // Serve para promover para o proximo cargo/patente
   public static String promover(String[] patente, int posicao) {
     String cargo = patente[posicao];
     return cargo;
@@ -223,6 +224,7 @@ public class ByteDoMilhao {
     String alternativaSelecionada = tecladoScanner.next().toLowerCase();
 
     while (true) {
+      // Verifica se o valor que o usuario digitou é valido
       if (alternativaSelecionada.equals("a") || alternativaSelecionada.equals("b") || alternativaSelecionada.equals("c")
           || alternativaSelecionada.equals("d")) {
         break;
@@ -267,18 +269,20 @@ public class ByteDoMilhao {
     int numPerguntas = 0;
 
     while (true) {
+      // Verifica se as perguntas ja acabarão
       if (numPerguntas == perguntasEAlternativas.length) {
         break;
       }
 
       imprimirPerguntaEAlternativas(perguntasEAlternativas, numPerguntas);
 
+      // Le a alternatica que o jogador selecionou
       String alternativaSelecionada = perguntaDaAlternativa(nome);
 
       verificarSePerguntaCorreta(alternativaSelecionada, alternativasCorretas, numPerguntas, suaPatente, patentes, nome,
           posicao, perguntasEAlternativas);
 
-      // Fiz uma segunda verificação para promover e almentar posicao
+      // Fiz uma segunda verificação para promover e aumentar posicao
       if (alternativasCorretas[numPerguntas].equals(alternativaSelecionada)) {
         posicao++;
         suaPatente = promover(patentes, posicao);
