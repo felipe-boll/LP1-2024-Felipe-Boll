@@ -2,7 +2,7 @@ package ex.TCA;
 
 import java.util.Scanner;
 
-public class ByteDoMilhao {
+public class ByteDoMilhao1 {
 
   public static Scanner tecladoScanner = new Scanner(System.in);
 
@@ -278,11 +278,11 @@ public class ByteDoMilhao {
 
     // Imprime a mensagem final do programa
     System.out.printf(
-        "=============================================================================================================================================================================\n\n");
+        "=================================================================================================================================================================================\n\n");
     System.out.printf(
-        "Não é que conseguiu chegar ate o final %s, estou impressionado. Voce terminou o meu show\nno cargo: %s. Que legal!! Obrigado por ter participado do meu show e espero que voce chegue longe quando começar em uma empresa de informatica de verdade.\nAgora quem quer ver um pouco de El Debug Del 8? E logo depois disso voltaremos com o Byte do Milhão apresentado por mim, Silicio Santos\n",
+        "Não é que conseguiu chegar ate o final %s, estou impressionado. Voce terminou o meu show no cargo: %s. Que legal!! Obrigado por ter participado do meu show e espero que voce chegue longe quando começar em uma empresa de informatica de verdade. Agora quem quer ver um pouco de El Debug Del 8? E logo depois disso voltaremos com o Byte do Milhão apresentado por mim, Silicio Santos\n",
         nome, suaPatente);
     System.out.printf(
-        "\n=============================================================================================================================================================================\n\n");
+        "\n================================================================================================================================================================================\n\n");
   }
 }
