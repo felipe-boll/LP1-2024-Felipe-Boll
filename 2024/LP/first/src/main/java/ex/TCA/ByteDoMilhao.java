@@ -6,6 +6,7 @@ public class ByteDoMilhao {
 
   public static Scanner tecladoScanner = new Scanner(System.in);
 
+  // Cria a matriz que armazena o ASCII do nome do jogo
   public static String[][] byteDoMilhao() {
     String[][] byteDoMilhao = {
         { ":::::::::  :::   ::: ::::::::::: ::::::::::  :::::::::   ::::::::   ::::    ::::  ::::::::::: :::        :::    :::     :::      ::::::::  " },
@@ -20,6 +21,7 @@ public class ByteDoMilhao {
     return byteDoMilhao;
   };
 
+  // Cria a matriz que armazena o ASCII da opção 1, que serve para iniciar o jogo
   public static String[][] paraJogar() {
     String[][] paraJogar = {
         { "  :::                   :::::::::     :::     :::::::::      :::      ::::::::::: ::::::::   ::::::::      :::     :::::::::   :::::::::  :::   ::: ::::::::::: ::::::::::  :::::::::   ::::::::   ::::    ::::  ::::::::::: :::        :::    :::     :::      ::::::::  " },
@@ -34,6 +36,8 @@ public class ByteDoMilhao {
     return paraJogar;
   }
 
+  // Cria a matriz que armazena o ASCII da opção 2, que serve para explicar como o
+  // jogo funciona
   public static String[][] comoFuncionda() {
     String[][] comoFunciona = {
         { " ::::::::                   ::::::::   ::::::::  ::::    ::::   ::::::::   :::::::::: :::    ::: ::::    :::  :::::::: ::::::::::: ::::::::  ::::    :::     :::       ::::::::   :::::::::  :::   ::: ::::::::::: ::::::::::  :::::::::   ::::::::   ::::    ::::  ::::::::::: :::        :::    :::     :::      ::::::::  " },
@@ -78,6 +82,7 @@ public class ByteDoMilhao {
     }
   }
 
+  // Imprime as ASCII para o menu e le a interação para começar ou não o jogo
   public static void menu() {
     String mensagem = "O jogo funciona da seguinte maneira: Voce entrara no Reality Show do nosso apresentador Silício Santos, onde ele te perguntara coisas sobre informatica e voce devera\nresponder conforme a alternativa correta, conforme voce acerta ira subir nas patentes da empresa Empresa, voce começa como um simples estagiario mas pode até se tornar o\nBBB(Big Bill Boss), boa sorte!!\n\n";
 
@@ -136,6 +141,7 @@ public class ByteDoMilhao {
     }
   }
 
+  // Cria o vetor que armazena os cargos que a empresa possui
   public static String[] patentesNaEmpresa() {
     String[] patente = { "Estagiário de Desenvolvimento de Software", "Desenvolvedor Júnior",
         "Desenvolvedor Pleno", "Desenvolvedor Sênior", "Líder Técnico de Desenvolvimento",
@@ -146,7 +152,6 @@ public class ByteDoMilhao {
 
   public static String promover(String[] patente, int posicao) {
     String cargo = patente[posicao];
-    // System.out.println(cargo);
     return cargo;
   }
 
@@ -158,12 +163,7 @@ public class ByteDoMilhao {
 
   }
 
-  public static String[][] silicioSantos() {
-    String[][] silicioSantos = {};
-
-    return silicioSantos;
-  }
-
+  // Cria a matriz que armazena todas as perguntas e alternativas do jogo
   public static String[][] criarPerguntasEAlternativas() {
     String[][] perguntasEAlternativas = {
         { "1) O que acontece se você não incluir um break em um bloco de switch?", "A) O programa para imediatamente.",
@@ -228,7 +228,6 @@ public class ByteDoMilhao {
       int numPerguntas, String suaPatente, String[] patentes, String nome, int posicao,
       String[][] perguntasEAlternativas) {
 
-    // System.out.println(alternativasCorretas[numPerguntas]);
     if (alternativasCorretas[numPerguntas].equals(alternativaSelecionada)) {
       posicao++;
       suaPatente = promover(patentes, posicao);
@@ -238,7 +237,7 @@ public class ByteDoMilhao {
           suaPatente);
     } else {
       System.out.printf(
-          "\nQue pena %s, mas não desanima, vamos para a proxima. Voce esta na patente %s. Vamos para a proxima pergunta!!\n\n",
+          "\nQue pena %s, mas não desanima. Voce esta na patente %s. Vamos para a proxima pergunta!!\n\n",
           nome,
           suaPatente);
     }
@@ -277,6 +276,7 @@ public class ByteDoMilhao {
 
     }
 
+    // Imprime a mensagem final do programa
     System.out.printf(
         "=============================================================================================================================================================================\n\n");
     System.out.printf(
