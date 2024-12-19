@@ -82,7 +82,8 @@ public class ByteDoMilhao {
     }
   }
 
-  // Imprime as ASCII para o menu e le a interação para começar o jogo ou explicar como funciona
+  // Imprime as ASCII para o menu e le a interação para começar o jogo ou explicar
+  // como funciona
   public static void menu() {
     String mensagem = "O jogo funciona da seguinte maneira: Voce entrara no Reality Show do nosso apresentador Silício Santos, onde ele te perguntara coisas sobre informatica e voce devera\nresponder conforme a alternativa correta, conforme voce acerta ira subir nas patentes da empresa Empresa, voce começa como um simples estagiario mas pode até se tornar o\nBBB(Big Bill Boss), boa sorte!!\n\n";
 
@@ -193,7 +194,7 @@ public class ByteDoMilhao {
     return alternativasCorretas;
   }
 
-  public static void imprimirMensagemFinal(String nome, String suaPatente){
+  public static void imprimirMensagemFinal(String nome, String suaPatente) {
     System.out.printf(
         "=================================================================================================================================================================================\n\n");
     System.out.printf(
@@ -201,7 +202,7 @@ public class ByteDoMilhao {
         nome, suaPatente);
     System.out.printf(
         "\n================================================================================================================================================================================\n\n");
-    
+
   }
 
   public static void imprimirPerguntaEAlternativas(String[][] perguntasEAlternativas, int numPerguntas) {
@@ -294,5 +295,5 @@ public class ByteDoMilhao {
 
     // Imprime a mensagem final do programa
     imprimirMensagemFinal(nome, suaPatente);
-    }
+  }
 }
