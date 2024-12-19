@@ -280,7 +280,7 @@ public class ByteDoMilhao {
     System.out.printf(
         "=================================================================================================================================================================================\n\n");
     System.out.printf(
-        "Não é que conseguiu chegar ate o final %s, estou impressionado. Voce terminou o meu show no cargo: %s. Que legal!! Obrigado por ter participado do meu show e espero que voce chegue longe quando começar em uma empresa de informatica de verdade. Agora quem quer ver um pouco de El Debug Del 8? E logo depois disso voltaremos com o Byte do Milhão apresentado por mim, Silicio Santos\n",
+        "Não é que conseguiu chegar ate o final %s, estou impressionado. Voce terminou o meu show no cargo: %s. Que legal!! Obrigado por ter participado do\nmeu show e espero que voce chegue longe quando começar em uma empresa de informatica de verdade. Agora quem quer ver um pouco de El Debug Del 8? E logo depois disso voltaremos\ncom o Byte do Milhão apresentado por mim, Silicio Santos\n",
         nome, suaPatente);
     System.out.printf(
         "\n================================================================================================================================================================================\n\n");
