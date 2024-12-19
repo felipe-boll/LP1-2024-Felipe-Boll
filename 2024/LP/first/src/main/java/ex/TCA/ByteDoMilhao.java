@@ -2,7 +2,7 @@ package ex.TCA;
 
 import java.util.Scanner;
 
-public class ByteDoMilhao1 {
+public class ByteDoMilhao {
 
   public static Scanner tecladoScanner = new Scanner(System.in);
 
