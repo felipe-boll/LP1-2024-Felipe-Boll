@@ -82,7 +82,8 @@ public class ByteDoMilhao {
     }
   }
 
-  // Imprime as ASCII para o menu e le a interação para começar ou não o jogo
+  // Imprime as ASCII para o menu e le a interação para começar o jogo ou explicar
+  // como funciona
   public static void menu() {
     String mensagem = "O jogo funciona da seguinte maneira: Voce entrara no Reality Show do nosso apresentador Silício Santos, onde ele te perguntara coisas sobre informatica e voce devera\nresponder conforme a alternativa correta, conforme voce acerta ira subir nas patentes da empresa Empresa, voce começa como um simples estagiario mas pode até se tornar o\nBBB(Big Bill Boss), boa sorte!!\n\n";
 
@@ -150,6 +151,7 @@ public class ByteDoMilhao {
     return patente;
   }
 
+  // Serve para promover para o proximo cargo/patente
   public static String promover(String[] patente, int posicao) {
     String cargo = patente[posicao];
     return cargo;
@@ -192,6 +194,17 @@ public class ByteDoMilhao {
     return alternativasCorretas;
   }
 
+  public static void imprimirMensagemFinal(String nome, String suaPatente) {
+    System.out.printf(
+        "=================================================================================================================================================================================\n\n");
+    System.out.printf(
+        "Não é que conseguiu chegar ate o final %s, estou impressionado. Voce terminou o meu show no cargo: %s. Que legal!! Obrigado por ter participado do\nmeu show e espero que voce chegue longe quando começar em uma empresa de informatica de verdade. Agora quem quer ver um pouco de El Debug Del 8? E logo depois disso voltaremos\ncom o Byte do Milhão apresentado por mim, Silicio Santos\n",
+        nome, suaPatente);
+    System.out.printf(
+        "\n================================================================================================================================================================================\n\n");
+
+  }
+
   public static void imprimirPerguntaEAlternativas(String[][] perguntasEAlternativas, int numPerguntas) {
     String[] perguntas = new String[perguntasEAlternativas.length];
     int colunas = perguntasEAlternativas[0].length;
@@ -212,6 +225,7 @@ public class ByteDoMilhao {
     String alternativaSelecionada = tecladoScanner.next().toLowerCase();
 
     while (true) {
+      // Verifica se o valor que o usuario digitou é valido
       if (alternativaSelecionada.equals("a") || alternativaSelecionada.equals("b") || alternativaSelecionada.equals("c")
           || alternativaSelecionada.equals("d")) {
         break;
@@ -256,17 +270,20 @@ public class ByteDoMilhao {
     int numPerguntas = 0;
 
     while (true) {
+      // Verifica se as perguntas ja acabarão
       if (numPerguntas == perguntasEAlternativas.length) {
         break;
       }
 
       imprimirPerguntaEAlternativas(perguntasEAlternativas, numPerguntas);
 
+      // Le a alternatica que o jogador selecionou
       String alternativaSelecionada = perguntaDaAlternativa(nome);
 
       verificarSePerguntaCorreta(alternativaSelecionada, alternativasCorretas, numPerguntas, suaPatente, patentes, nome,
           posicao, perguntasEAlternativas);
 
+      // Fiz uma segunda verificação para promover e aumentar posicao
       if (alternativasCorretas[numPerguntas].equals(alternativaSelecionada)) {
         posicao++;
         suaPatente = promover(patentes, posicao);
@@ -277,12 +294,6 @@ public class ByteDoMilhao {
     }
 
     // Imprime a mensagem final do programa
-    System.out.printf(
-        "=============================================================================================================================================================================\n\n");
-    System.out.printf(
-        "Não é que conseguiu chegar ate o final %s, estou impressionado. Voce terminou o meu show\nno cargo: %s. Que legal!! Obrigado por ter participado do meu show e espero que voce chegue longe quando começar em uma empresa de informatica de verdade.\nAgora quem quer ver um pouco de El Debug Del 8? E logo depois disso voltaremos com o Byte do Milhão apresentado por mim, Silicio Santos\n",
-        nome, suaPatente);
-    System.out.printf(
-        "\n=============================================================================================================================================================================\n\n");
+    imprimirMensagemFinal(nome, suaPatente);
   }
 }
