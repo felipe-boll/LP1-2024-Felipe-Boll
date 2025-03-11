@@ -34,7 +34,7 @@ public class RanDentes {
   }
 
   public static String[] criarVetorCores() {
-    String[] cores = { "Vermelho", "Azul", "Amarelo", "Roxo", "Rosa" };
+    String[] cores = { "Verde Cristal", "Verde Mar", "Verde Perola", "Cinza", "Prateado", "Azul", "", "Roxo", "Rosa" };
 
     return cores;
   }
