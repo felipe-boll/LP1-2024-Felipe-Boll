@@ -280,6 +280,7 @@ public class ByteDoMilhao {
       // Le a alternatica que o jogador selecionou
       String alternativaSelecionada = perguntaDaAlternativa(nome);
 
+      limparTela();
       verificarSePerguntaCorreta(alternativaSelecionada, alternativasCorretas, numPerguntas, suaPatente, patentes, nome,
           posicao, perguntasEAlternativas);
 
